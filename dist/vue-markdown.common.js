@@ -6,14 +6,14 @@
 
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("babel-runtime/core-js/get-iterator"), require("babel-runtime/core-js/object/keys"), require("markdown-it"), require("markdown-it-emoji"), require("markdown-it-sub"), require("markdown-it-sup"), require("markdown-it-footnote"), require("markdown-it-deflist"), require("markdown-it-abbr"), require("markdown-it-ins"), require("markdown-it-mark"), require("markdown-it-toc-and-anchor"), require("markdown-it-katex"), require("markdown-it-task-lists"));
+		module.exports = factory(require("babel-runtime/core-js/get-iterator"), require("babel-runtime/core-js/object/keys"), require("markdown-it"), require("markdown-it-emoji"), require("markdown-it-sub"), require("markdown-it-sup"), require("markdown-it-footnote"), require("markdown-it-deflist"), require("markdown-it-abbr"), require("markdown-it-ins"), require("markdown-it-mark"), require("markdown-it-katex"), require("markdown-it-task-lists"));
 	else if(typeof define === 'function' && define.amd)
-		define(["babel-runtime/core-js/get-iterator", "babel-runtime/core-js/object/keys", "markdown-it", "markdown-it-emoji", "markdown-it-sub", "markdown-it-sup", "markdown-it-footnote", "markdown-it-deflist", "markdown-it-abbr", "markdown-it-ins", "markdown-it-mark", "markdown-it-toc-and-anchor", "markdown-it-katex", "markdown-it-task-lists"], factory);
+		define(["babel-runtime/core-js/get-iterator", "babel-runtime/core-js/object/keys", "markdown-it", "markdown-it-emoji", "markdown-it-sub", "markdown-it-sup", "markdown-it-footnote", "markdown-it-deflist", "markdown-it-abbr", "markdown-it-ins", "markdown-it-mark", "markdown-it-katex", "markdown-it-task-lists"], factory);
 	else if(typeof exports === 'object')
-		exports["VueMarkdown"] = factory(require("babel-runtime/core-js/get-iterator"), require("babel-runtime/core-js/object/keys"), require("markdown-it"), require("markdown-it-emoji"), require("markdown-it-sub"), require("markdown-it-sup"), require("markdown-it-footnote"), require("markdown-it-deflist"), require("markdown-it-abbr"), require("markdown-it-ins"), require("markdown-it-mark"), require("markdown-it-toc-and-anchor"), require("markdown-it-katex"), require("markdown-it-task-lists"));
+		exports["VueMarkdown"] = factory(require("babel-runtime/core-js/get-iterator"), require("babel-runtime/core-js/object/keys"), require("markdown-it"), require("markdown-it-emoji"), require("markdown-it-sub"), require("markdown-it-sup"), require("markdown-it-footnote"), require("markdown-it-deflist"), require("markdown-it-abbr"), require("markdown-it-ins"), require("markdown-it-mark"), require("markdown-it-katex"), require("markdown-it-task-lists"));
 	else
-		root["VueMarkdown"] = factory(root["babel-runtime/core-js/get-iterator"], root["babel-runtime/core-js/object/keys"], root["markdown-it"], root["markdown-it-emoji"], root["markdown-it-sub"], root["markdown-it-sup"], root["markdown-it-footnote"], root["markdown-it-deflist"], root["markdown-it-abbr"], root["markdown-it-ins"], root["markdown-it-mark"], root["markdown-it-toc-and-anchor"], root["markdown-it-katex"], root["markdown-it-task-lists"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_4__, __WEBPACK_EXTERNAL_MODULE_5__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_7__, __WEBPACK_EXTERNAL_MODULE_8__, __WEBPACK_EXTERNAL_MODULE_9__, __WEBPACK_EXTERNAL_MODULE_10__, __WEBPACK_EXTERNAL_MODULE_11__, __WEBPACK_EXTERNAL_MODULE_12__, __WEBPACK_EXTERNAL_MODULE_13__, __WEBPACK_EXTERNAL_MODULE_14__) {
+		root["VueMarkdown"] = factory(root["babel-runtime/core-js/get-iterator"], root["babel-runtime/core-js/object/keys"], root["markdown-it"], root["markdown-it-emoji"], root["markdown-it-sub"], root["markdown-it-sup"], root["markdown-it-footnote"], root["markdown-it-deflist"], root["markdown-it-abbr"], root["markdown-it-ins"], root["markdown-it-mark"], root["markdown-it-katex"], root["markdown-it-task-lists"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_1__, __WEBPACK_EXTERNAL_MODULE_2__, __WEBPACK_EXTERNAL_MODULE_3__, __WEBPACK_EXTERNAL_MODULE_4__, __WEBPACK_EXTERNAL_MODULE_5__, __WEBPACK_EXTERNAL_MODULE_6__, __WEBPACK_EXTERNAL_MODULE_7__, __WEBPACK_EXTERNAL_MODULE_8__, __WEBPACK_EXTERNAL_MODULE_9__, __WEBPACK_EXTERNAL_MODULE_10__, __WEBPACK_EXTERNAL_MODULE_11__, __WEBPACK_EXTERNAL_MODULE_12__, __WEBPACK_EXTERNAL_MODULE_13__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -110,15 +110,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _markdownItMark2 = _interopRequireDefault(_markdownItMark);
 
-	var _markdownItTocAndAnchor = __webpack_require__(12);
-
-	var _markdownItTocAndAnchor2 = _interopRequireDefault(_markdownItTocAndAnchor);
-
-	var _markdownItKatex = __webpack_require__(13);
+	var _markdownItKatex = __webpack_require__(12);
 
 	var _markdownItKatex2 = _interopRequireDefault(_markdownItKatex);
 
-	var _markdownItTaskLists = __webpack_require__(14);
+	var _markdownItTaskLists = __webpack_require__(13);
 
 	var _markdownItTaskLists2 = _interopRequireDefault(_markdownItTaskLists);
 
@@ -140,7 +136,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    watches: {
 	      type: Array,
 	      default: function _default() {
-	        return ['source', 'show', 'toc'];
+	        return ['source', 'show'];
 	      }
 	    },
 	    source: {
@@ -195,44 +191,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      type: Boolean,
 	      default: true
 	    },
-	    toc: {
-	      type: Boolean,
-	      default: false
-	    },
-	    tocId: {
-	      type: String
-	    },
-	    tocClass: {
-	      type: String,
-	      default: 'table-of-contents'
-	    },
-	    tocFirstLevel: {
-	      type: Number,
-	      default: 2
-	    },
-	    tocLastLevel: {
-	      type: Number
-	    },
-	    tocAnchorLink: {
-	      type: Boolean,
-	      default: true
-	    },
-	    tocAnchorClass: {
-	      type: String,
-	      default: 'toc-anchor'
-	    },
-	    tocAnchorLinkSymbol: {
-	      type: String,
-	      default: '#'
-	    },
-	    tocAnchorLinkSpace: {
-	      type: Boolean,
-	      default: true
-	    },
-	    tocAnchorLinkClass: {
-	      type: String,
-	      default: 'toc-anchor-link'
-	    },
 	    anchorAttributes: {
 	      type: Object,
 	      default: function _default() {
@@ -253,11 +211,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  },
 
-	  computed: {
-	    tocLastLevelComputed: function tocLastLevelComputed() {
-	      return this.tocLastLevel > this.tocFirstLevel ? this.tocLastLevel : this.tocFirstLevel + 1;
-	    }
-	  },
+	  computed: {},
 
 	  render: function render(createElement) {
 	    var _this = this;
@@ -295,28 +249,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	      });
 	      return defaultLinkRenderer(tokens, idx, options, env, self);
 	    };
-
-	    if (this.toc) {
-	      this.md.use(_markdownItTocAndAnchor2.default, {
-	        tocClassName: this.tocClass,
-	        tocFirstLevel: this.tocFirstLevel,
-	        tocLastLevel: this.tocLastLevelComputed,
-	        anchorLink: this.tocAnchorLink,
-	        anchorLinkSymbol: this.tocAnchorLinkSymbol,
-	        anchorLinkSpace: this.tocAnchorLinkSpace,
-	        anchorClassName: this.tocAnchorClass,
-	        anchorLinkSymbolClassName: this.tocAnchorLinkClass,
-	        tocCallback: function tocCallback(tocMarkdown, tocArray, tocHtml) {
-	          if (tocHtml) {
-	            if (_this.tocId && document.getElementById(_this.tocId)) {
-	              document.getElementById(_this.tocId).innerHTML = tocHtml;
-	            }
-
-	            _this.$emit('toc-rendered', tocHtml);
-	          }
-	        }
-	      });
-	    }
 
 	    var outHtml = this.show ? this.md.render(this.prerender(this.sourceData)) : '';
 	    outHtml = this.postrender(outHtml);
@@ -449,12 +381,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, exports) {
 
 	module.exports = __WEBPACK_EXTERNAL_MODULE_13__;
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_14__;
 
 /***/ })
 /******/ ])
